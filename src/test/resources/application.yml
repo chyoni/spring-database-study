@@ -7,3 +7,14 @@ spring:
 #    username: sa
 #    password:
 #    driver-class-name: org.h2.Driver
+
+mybatis:
+  type-aliases-package: hello.itemservice.domain
+  configuration:
+    map-underscore-to-camel-case: true
+
+logging:
+  level:
+    hello.itemservice.repository.mybatis: TRACE
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
